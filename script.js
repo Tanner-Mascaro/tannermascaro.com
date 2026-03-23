@@ -11,4 +11,12 @@ function bitchIncrease() {
 
     bitchCount++;
     displayCount.innerText = bitchCount;
+
+    if (bitchCount >= 5 && imageContainer.innerHTML === "") {
+        const img = document.createElement('img');
+        img.src = 'images/laugh.gif'; 
+        img.alt = 'Surprise Image';
+        img.style.width = '200px'; 
+        imageContainer.appendChild(img);
+    }
 }

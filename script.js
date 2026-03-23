@@ -5,6 +5,10 @@ let bitchCount = 0;
 button.addEventListener('click', bitchIncrease);
 
 function bitchIncrease() {
+    if (message.style.display === 'none') {
+        message.style.display = 'inline';
+    }
+
     bitchCount++;
     displayCount.innerText = bitchCount;
 }

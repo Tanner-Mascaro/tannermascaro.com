@@ -1,15 +1,14 @@
 
 
-
 .main-body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .5fr 1fr;
     grid-template-areas: 
     "header1 header2"
     "aside main"
     "footer footer";
+    background: linear-gradient(120deg, #1f005c, #35006d, rgb(255, 0, 92));
 }
-
 
 .top-header-box{
     grid-area: header1;
@@ -17,31 +16,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: blue;
     height: 50rem;
-    border-right: black 2px solid;
+    color: white;
+    box-shadow: 8px 0 2px rgba(255, 0, 92, 0.3);
+    height: 100%;
+    border-right:solid 1px rgb(255, 0, 92, .8);
+    margin-top: 0;
 }
+
 
 .second-header-box{
     grid-area: header2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: green;
     height: 50rem;
 
+}
+
+.second-header-box h1 {
+    color: white;
+    border-bottom: black solid .2rem;
 }
 
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 2.5rem;
 
 }
 
 .project-cards {
+    background: white;
     border: black solid 1px;
-    height: 100px;
+    height: 200px;
     width: 250px;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, grow .5; 
 }

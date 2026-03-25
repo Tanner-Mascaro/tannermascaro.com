@@ -2,23 +2,46 @@
 
 
 .main-body {
-    display: flex;
-    flex-direction: row;
-    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header1 header2"
+    "aside main"
+    "footer footer";
 }
 
 
 .top-header-box{
+    grid-area: header1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: blue;
-    height: 10rem;
+    height: 50rem;
+    border-right: black 2px solid;
 }
 
 .second-header-box{
+    grid-area: header2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: green;
-    height: 10rem;
+    height: 50rem;
 
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+}
+
+.project-cards {
+    border: black solid 1px;
+    height: 100px;
+    width: 250px;
 }

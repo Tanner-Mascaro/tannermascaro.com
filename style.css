@@ -1,13 +1,29 @@
 
 
 .main-body {
+    font-family: Tahoma, sans-serif;
     display: grid;
     grid-template-columns: .5fr 1fr;
     grid-template-areas: 
     "header1 header2"
     "aside main"
     "footer footer";
-    background: linear-gradient(120deg, #1f005c, #35006d, rgb(255, 0, 92));
+    background-color: #0f172a;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+    margin: 0;
+    width: 100%;
+}
+
+.top-header-box img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .top-header-box{
@@ -17,13 +33,24 @@
     justify-content: center;
     align-items: center;
     height: 50rem;
-    color: white;
-    box-shadow: 8px 0 2px rgba(255, 0, 92, 0.3);
+    color: #e5e7eb;
     height: 100%;
-    border-right:solid 1px rgb(255, 0, 92, .8);
-    margin-top: 0;
+    margin-top: 2rem;
+    
 }
 
+.top-header-box a {
+    background-color: rgba(255,255,255,.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rbga(255,255,255,.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    align-items: center;
+    padding: .4rem;
+    font-size: .6rem;
+    color: white;
+    text-decoration: none;
+}
 
 .second-header-box{
     grid-area: header2;
@@ -31,6 +58,8 @@
     flex-direction: column;
     align-items: center;
     height: 50rem;
+    color: #0f172a;
+    color: #f9fafb;
 
 }
 
@@ -47,12 +76,50 @@
 }
 
 .project-cards {
-    background: white;
-    border: black solid 1px;
-    height: 200px;
+    background: #1e293b;
+    height: 300px;
     width: 250px;
     text-align: center;
     border-radius: 10%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, grow .5; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; 
+
+}
+
+.project-cards h3 {
+    margin-bottom: .5rem;
+}
+
+.project-cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.lil-pill {
+    background-color: #334155;
+    backdrop-filter: blur(10px);
+    border: 1px solid rbga(255,255,255,.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    align-items: center;
+    padding: .4rem;
+    font-size: .6rem;
+    color: rgb(31, 31, 31);
+}
+
+.footer {
+    grid-area: footer;   
+    background: #334155;
+    height: 2rem;
+    width: 100%;
 }

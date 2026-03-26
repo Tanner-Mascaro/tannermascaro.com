@@ -131,31 +131,53 @@
 }
 
 @media (max-width: 600px) {
+  .main-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header1"
+      "header2"
+      "footer";
+    grid-template-rows: auto;
+    padding: 1rem;
+  }
+
   .top-header-box {
     flex-direction: column;
-    align-items: center;  
-    text-align: center;   
-    max-width: 90%;        
-    gap: 0.5rem;         
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    gap: 0.5rem;
+    margin: 0 auto;
   }
 
   .top-header-box img {
-    width: 150px;  
+    width: 150px;
     height: 150px;
   }
 
-  .profile-info a {
-    width: auto;  
+  .second-header-box {
+    width: 100%;
+    padding: 0 0.5rem;
   }
 
-    .projects {
-    grid-template-columns: 1fr; 
-    gap: 1.5rem;              
-    justify-items: center;       
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
   }
 
   .project-cards {
-    width: 90%;                
-    max-width: 300px;            
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .project-cards h3 {
+    font-size: 1rem;
+  }
+
+  .lil-pill {
+    font-size: 0.5rem;
+    padding: 0.3rem;
   }
 }

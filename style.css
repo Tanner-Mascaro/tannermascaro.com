@@ -147,4 +147,15 @@
   .profile-info a {
     width: auto;  
   }
+
+    .projects {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;              
+    justify-items: center;       
+  }
+
+  .project-cards {
+    width: 90%;                
+    max-width: 300px;            
+  }
 }

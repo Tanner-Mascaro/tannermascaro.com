@@ -74,6 +74,7 @@ a:focus-visible {
 
 .profile-links {
     display: flex;
+    flex-wrap: wrap;
     gap: .6rem;
 }
 
@@ -112,7 +113,7 @@ a:focus-visible {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 1.5rem;
 }
 
@@ -263,6 +264,38 @@ a.project-cards:focus-visible .play-link {
         align-items: flex-start;
         padding: 2rem 1.25rem;
         gap: 1.25rem;
+    }
+
+    .top-header-box img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-info {
+        max-width: 100%;
+    }
+
+    .profile-info .top-second-title {
+        font-size: 1.4rem;
+        overflow-wrap: anywhere;
+    }
+
+    .second-header-box {
+        padding: 2rem 1.25rem 2.5rem;
+    }
+
+    .second-header-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-body {
+        width: 100%;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        text-align: center;
+        gap: .4rem 1rem;
     }
 
     .project-cards--featured {

@@ -1,61 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="/images/tanner_favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanner Mascaro</title>
+    <title>Tanner Mascaro – Software Engineer</title>
+    <meta name="description" content="Tanner Mascaro is an Associate Software Engineer at Kipu Health (formerly Team Recovery Technologies) in Lehi, Utah, building mobile apps and integrations for behavioral health providers. Graduating from Utah Valley University.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tannermascaro.com/">
+    <meta property="og:title" content="Tanner Mascaro – Software Engineer">
+    <meta property="og:description" content="Associate Software Engineer at Kipu Health building mobile apps and integrations for behavioral health providers.">
+    <meta property="og:image" content="https://tannermascaro.com/images/tanner-profile.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-59X92YQPZY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-59X92YQPZY');
+    </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-59X92YQPZY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-59X92YQPZY');
-</script>
 
 <body class="main-body">
 
-
-    <div class="top-header-box">
-        <img src="images/tanner-profile.jpeg">
+    <header class="top-header-box">
+        <img src="images/tanner-profile.jpeg" alt="Portrait of Tanner Mascaro" width="200" height="200">
         <div class="profile-info">
-            <p class="top-title">Hello, I'm Tanner</p>
-            <h2 class="top-second-title">Developer/Engineer</h2>
-            <a href="resume.pdf" target="_blank">Resume</a>
-            <a href="https://www.linkedin.com/in/tanner-mascaro-219853268/">LinkedIn</a>
+            <h1 class="top-second-title">Tanner Mascaro</h1>
+            <p class="top-title">Associate Software Engineer, Kipu Health</p>
+            <p class="bio">
+                I joined Team Recovery Technologies, which Kipu Health acquired, and now work
+                there as an Associate Software Engineer in Lehi, Utah. I build mobile apps and
+                integrations that help behavioral health providers stay connected with patients
+                after treatment. I'm about to graduate from Utah Valley University.
+            </p>
+            <div class="profile-links">
+                <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+                <a href="https://www.linkedin.com/in/tanner-mascaro-219853268/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Tanner-Mascaro" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </div>
-    </div>
-    <div class="second-header-box">
-        <h1> Here are some of my projects</h1>
+    </header>
+
+    <main class="second-header-box">
+        <h2>Projects</h2>
         <div class="projects">
-            <div class="project-cards">
-                <h3>Farming Game</h3>
+            <a class="project-cards project-cards--featured" href="https://pistolsandpotion.com" target="_blank" rel="noopener">
+                <div class="preview">
+                    <img src="images/pistols-preview.jpg" alt="Pistols &amp; Potions game lobby screen" width="440" height="276" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3>Pistols &amp; Potions</h3>
+                    <div class="pill-container">
+                        <span class="lil-pill">html</span>
+                        <span class="lil-pill">css</span>
+                        <span class="lil-pill">javascript</span>
+                    </div>
+                    <p class="card-desc">A multiplayer 3D arena shooter that runs in the browser, with up to 8 players per room in free-for-all or red vs blue teams. Everyone gets a pistol and a blade, ammo is limited, and loot on the map keeps matches moving. Built with a Node server and plain ES modules, with bots for solo testing.</p>
+                    <span class="play-link">Play now</span>
+                </div>
+            </a>
+
+            <a class="project-cards" href="https://feedflow-murex.vercel.app" target="_blank" rel="noopener">
+                <h3>FeedFlow</h3>
+                <div class="pill-container">
+                    <span class="lil-pill">javascript</span>
+                    <span class="lil-pill">supabase</span>
+                    <span class="lil-pill">pwa</span>
+                </div>
+                <p class="card-desc">An inventory app for a farm co-op, modeled on their Excel system. Staff log batches, receipts and sales, and managers see live beginning-to-ending balances. It has role-based access with Supabase, works offline as a PWA, and deploys through GitHub Actions and Vercel.</p>
+                <div class="preview">
+                    <img src="images/feedflow-preview.jpg" alt="FeedFlow sign-in screen" width="220" height="138" loading="lazy">
+                </div>
+                <span class="play-link">Live demo</span>
+            </a>
+
+            <a class="project-cards" href="https://github.com/Tanner-Mascaro/scoreboard" target="_blank" rel="noopener">
+                <h3>Live Scoreboard</h3>
+                <div class="pill-container">
+                    <span class="lil-pill">javascript</span>
+                    <span class="lil-pill">node</span>
+                    <span class="lil-pill">websockets</span>
+                </div>
+                <p class="card-desc">Real-time sports scores pushed to every viewer over WebSockets. Clients subscribe to a sport, and the server routes and reshapes each update before broadcasting it, using publish-subscribe, content-based routing and message translator patterns.</p>
+                <span class="play-link">View code</span>
+            </a>
+
+            <a class="project-cards" href="https://github.com/Tanner-Mascaro/TODO-List" target="_blank" rel="noopener">
+                <h3>Todo List</h3>
                 <div class="pill-container">
                     <span class="lil-pill">html</span>
                     <span class="lil-pill">css</span>
                     <span class="lil-pill">javascript</span>
+                    <span class="lil-pill">firebase</span>
                 </div>
-            </div>
-            <div class="project-cards">
-                <h3>Weather App</h3>
-                    <span class="lil-pill">html</span>
-                    <span class="lil-pill">css</span>
-                    <span class="lil-pill">node</span>
-            </div>
-            <div class="project-cards">
-                <h3>Analytics Dashboard</h3>
-            </div>
-            <div class="project-cards"></div>
+                <p class="card-desc">A task app where each person signs up, logs in and manages their own to-dos. Accounts and password resets run on Firebase Authentication, with the interface in plain HTML, CSS and JavaScript.</p>
+                <div class="preview">
+                    <img src="images/todo-list-preview.jpg" alt="Todo List login screen" width="220" height="138" loading="lazy">
+                </div>
+                <span class="play-link">View code</span>
+            </a>
 
         </div>
-    </div>
+    </main>
 
-    <div class="footer">Footer</div>
-
+    <footer class="footer">
+        <span>&copy; 2026 Tanner Mascaro &middot; Lehi, Utah</span>
+        <a href="https://www.linkedin.com/in/tanner-mascaro-219853268/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Tanner-Mascaro" target="_blank" rel="noopener">GitHub</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>
